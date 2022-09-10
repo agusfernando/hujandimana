@@ -1,0 +1,28 @@
+name: hujandimana
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  better_player: ^0.0.83
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  get: 4.6.5
+  google_maps_flutter: ^2.1.12
+  http: ^0.13.5
+  location: ^4.4.0
+  permission_handler: ^10.0.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
