@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -83,7 +86,10 @@ class HomeController extends GetxController {
           );
 
       if (responseResult.statusCode == 200) {
-        return RaraResponse.fromMap(data);
+        String dataResponse = '{"data":${responseResult.body}}';
+        var dataMap = jsonDecode(dataResponse);
+        log('response : ${dataMap["data"][0]}');
+        return RaraResponse.fromMap(dataMap);
       } else
         throw Exception('Failed to load RaraResponse');
     } on Exception catch (e) {

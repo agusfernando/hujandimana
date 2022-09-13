@@ -97,9 +97,7 @@ class BottomSheetReport extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('data_m3u8 : ${data.m3U8}');
-    homeController.initializeConfigBetterPlayer(context,
-        url: 'http://45.118.114.26/camera/Buahbatu.m3u8');
+    homeController.initializeConfigBetterPlayer(context, url: data.m3U8);
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
@@ -117,7 +115,7 @@ class BottomSheetReport extends StatelessWidget {
                 color: Colors.black12, borderRadius: BorderRadius.circular(10)),
           ),
           SizedBox(
-            height: 32,
+            height: 24,
           ),
           Container(
             width: Get.width,

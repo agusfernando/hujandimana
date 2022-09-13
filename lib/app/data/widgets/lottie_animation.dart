@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class LottieAnimation extends StatelessWidget {
   const LottieAnimation({
@@ -8,9 +9,10 @@ class LottieAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.green.shade100,
-        child: Center(child: CircularProgressIndicator())
-        // Lottie.asset('assets/images/alertPinMaps.json'),
-        );
+      color: Colors.green.shade100,
+      child:
+          // Center(child: CircularProgressIndicator())
+          Lottie.asset('assets/images/alertPinMaps.json'),
+    );
   }
 }
